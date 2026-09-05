@@ -9,102 +9,148 @@
 <meta property="og:title" content="Our Branches — Port Moresby, Lae, Madang, Kokopo, Rabaul, Kimbe | BNBM PNG"><meta property="og:description" content="Find your nearest BNBM Hardware or Home Centre branch in Papua New Guinea with address, phone, fax and email."><meta property="og:image" content="https://www.bnbmpng.com/img-hero.jpg"><meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23266fb3'/><text x='32' y='42' font-family='Arial' font-weight='bold' font-size='26' text-anchor='middle' fill='white'>B</text></svg>">
 <style>
-:root{--blue:#266fb3;--cyan:#1daedd;--orange:#eb5c3a;--navy:#1b3a63;--ink:#1f2937;--muted:#5b6472;--line:#e5e7eb;--bg:#f6f8fb;--w:1120px}
+@font-face{font-family:"Montserrat";font-weight:800;font-display:swap;src:url(montserrat-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:700;font-display:swap;src:url(montserrat-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-weight:400;font-display:swap;src:url(source-sans-3-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-weight:600;font-display:swap;src:url(source-sans-3-latin-600-normal.woff2) format("woff2")}
+:root{--blue:#266fb3;--blue-d:#1d5a94;--cyan:#1daedd;--orange:#eb5c3a;--orange-d:#d24b2b;--navy:#1b3a63;--ink:#1f2937;--muted:#5b6472;--line:#e5e7eb;--bg:#f4f7fb;--w:1140px;
+ --head:"Montserrat","Segoe UI",Arial,sans-serif;--body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;--r:14px;--sh:0 10px 30px rgba(16,24,40,.08);--sh2:0 18px 44px rgba(16,24,40,.14)}
 *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
-img{max-width:100%;display:block} a{color:var(--blue)} h1,h2,h3,h4{line-height:1.2;margin:0}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
-/* header + dropdown nav */
-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.nav .logo img{height:38px;width:auto}
-.nav>ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;align-items:center}
+body{margin:0;font-family:var(--body);font-size:17px;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block} a{color:var(--blue)} h1,h2,h3,h4{font-family:var(--head);line-height:1.15;margin:0;letter-spacing:-.01em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 22px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.nav .logo img{height:40px;width:auto}
+.nav>ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;align-items:center}
 .nav>ul>li{position:relative}
-.nav>ul>li>a{display:block;padding:10px 11px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;border-radius:8px;white-space:nowrap}
-.nav>ul>li>a:hover,.nav>ul>li.on>a{color:var(--blue);background:#eef4fb}
-.nav .sub{display:none;position:absolute;top:100%;left:0;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(16,24,40,.12);padding:8px;list-style:none;margin:6px 0 0;z-index:60}
-.nav .sub a{display:block;padding:9px 12px;border-radius:7px;text-decoration:none;color:var(--ink);font-size:14px}
+.nav>ul>li>a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px;white-space:nowrap;position:relative}
+.nav>ul>li>a:after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--orange);transform:scaleX(0);transition:transform .2s;transform-origin:left}
+.nav>ul>li>a:hover:after,.nav>ul>li.on>a:after{transform:scaleX(1)}
+.nav>ul>li>a:hover,.nav>ul>li.on>a{color:var(--blue)}
+.nav .sub{display:none;position:absolute;top:100%;left:0;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh2);padding:8px;list-style:none;margin:8px 0 0;z-index:60}
+.nav .sub:before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px}
+.nav .sub a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:15px}
 .nav .sub a:hover{background:#eef4fb;color:var(--blue)}
 .nav>ul>li:hover>.sub,.nav>ul>li:focus-within>.sub{display:block}
-.nav .cta{background:var(--orange);color:#fff!important;padding:10px 16px;border-radius:8px;margin-left:8px}
-.nav .cta:hover{background:#d94e2e!important}
+.nav .cta{background:var(--orange);color:#fff!important;padding:11px 18px;border-radius:9px;margin-left:8px;box-shadow:0 6px 16px rgba(235,92,58,.3)}
+.nav .cta:after{display:none} .nav .cta:hover{background:var(--orange-d)!important}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:18px}
-/* hero + page banners */
-.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
-.hero img.bg{width:100%;height:380px;object-fit:cover;object-position:center top}
-.hero .band{background:var(--blue);padding:46px 0 50px}
-.hero h1{font-size:40px;font-weight:800;letter-spacing:-.01em;max-width:780px}
-.hero p.lead{font-size:18px;max-width:720px;margin:14px 0 26px;opacity:.95}
-.btn{display:inline-block;padding:12px 20px;border-radius:9px;font-weight:700;text-decoration:none;font-size:15px}
-.btn.o{background:var(--orange);color:#fff} .btn.w{background:#fff;color:var(--blue);margin-left:10px} .btn.b{background:var(--blue);color:#fff}
-.stats{background:var(--orange);color:#fff}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px 20px}
-.stats div{text-align:center} .stats b{display:block;font-size:26px;line-height:1.1} .stats span{font-size:13px;opacity:.95}
-.banner{background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;padding:46px 0}
-.banner h1{font-size:34px;font-weight:800} .banner p{margin:8px 0 0;font-size:17px;opacity:.92;max-width:760px}
-.crumb{font-size:13px;opacity:.85;margin-bottom:10px} .crumb a{color:#fff;text-decoration:none}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--navy);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;background:url(img-hero.jpg) center 30%/cover no-repeat;opacity:.55;z-index:-2;filter:saturate(1.1)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,36,66,.96) 0%,rgba(15,36,66,.85) 45%,rgba(15,36,66,.35) 100%);z-index:-1}
+.hero .inner{padding:84px 0 150px;max-width:760px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#ffd9cf;margin-bottom:18px}
+.hero .eyebrow:before{content:"";width:34px;height:3px;background:var(--orange);border-radius:2px}
+.hero h1{font-size:50px;font-weight:800;line-height:1.08;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.hero p.lead{font-size:20px;max-width:640px;margin:20px 0 32px;opacity:.95}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-family:var(--head);font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.o{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(235,92,58,.35)} .btn.w{background:#fff;color:var(--navy);margin-left:12px} .btn.b{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(38,111,179,.3)}
+.stats{position:relative;z-index:2;margin-top:-84px}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:#fff;border-radius:var(--r);padding:22px 22px 20px;box-shadow:var(--sh2);border-top:4px solid var(--orange)}
+.stat:nth-child(2){border-top-color:var(--blue)} .stat:nth-child(3){border-top-color:var(--cyan)} .stat:nth-child(4){border-top-color:var(--navy)}
+.stat b{display:block;font-family:var(--head);font-size:34px;font-weight:800;color:var(--navy);line-height:1} .stat span{display:block;margin-top:6px;font-size:14px;color:var(--muted);font-weight:600}
+/* page banner */
+.banner{position:relative;background:var(--navy);color:#fff;padding:60px 0 58px;overflow:hidden}
+.banner:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 300px at 85% 20%,rgba(29,174,221,.35),transparent 60%),radial-gradient(600px 260px at 10% 100%,rgba(235,92,58,.35),transparent 60%)}
+.banner .wrap{position:relative}
+.banner h1{font-size:40px;font-weight:800} .banner p{margin:10px 0 0;font-size:19px;opacity:.9;max-width:760px}
+.crumb{font-size:13px;opacity:.8;margin-bottom:12px;font-weight:600;letter-spacing:.04em} .crumb a{color:#fff;text-decoration:none}
 /* sections */
-section{padding:60px 0} section.alt{background:var(--bg)}
-.kicker{color:var(--orange);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:8px}
-h2{font-size:30px;color:var(--navy);margin-bottom:18px} h2.sm{font-size:24px}
-.more{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none} .more:after{content:" →"}
-.two{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
-.prose p{font-size:16.5px;color:#374151}
-.structure{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
-.structure h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+section{padding:84px 0} section.alt{background:var(--bg)} section.tight{padding:56px 0}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--orange);font-family:var(--head);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;margin-bottom:12px}
+.kicker:before{content:"";width:26px;height:3px;background:var(--orange);border-radius:2px}
+h2{font-size:36px;font-weight:800;color:var(--navy);margin-bottom:22px} h2.sm{font-size:28px}
+.sub-h{font-size:18px;color:var(--muted);max-width:720px;margin:-8px 0 30px}
+.more{display:inline-block;margin-top:16px;font-family:var(--head);font-weight:700;text-decoration:none;font-size:15px} .more:after{content:" →";transition:margin .15s} .more:hover:after{margin-left:4px}
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.prose p{font-size:17.5px;color:#374151}
+.structure{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.structure h3{font-family:var(--body);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
 .structure ol{list-style:none;margin:0;padding:0}
-.structure li{padding:9px 12px;border-radius:8px;margin:6px 0;font-weight:600;font-size:14.5px;background:#fbe9e4;color:#7a2d1a}
+.structure li{padding:10px 14px;border-radius:9px;margin:6px 0;font-weight:600;font-size:15px;background:#fbe9e4;color:#7a2d1a}
 .structure li.b{background:#e6f0fa;color:var(--navy)} .structure li.l{background:var(--blue);color:#fff}
-.structure li small{display:block;font-weight:400;font-size:12.5px;opacity:.85}
+.structure li small{display:block;font-weight:400;font-size:13px;opacity:.85}
 /* cards */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:box-shadow .15s,transform .15s}
-a.card:hover{box-shadow:0 12px 28px rgba(16,24,40,.10);transform:translateY(-2px)}
-.card img,.card .ph{height:160px;width:100%;object-fit:cover} .card .ph{background:linear-gradient(135deg,#e6f0fa,#d3e6f7)}
-.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:18px;color:var(--navy)} .card p{margin:0;font-size:14.5px;color:#374151}
-.division .head{padding:18px 22px;color:#fff;font-weight:800;font-size:22px;letter-spacing:.02em}
-.division.hw .head{background:var(--blue)} .division.hc .head{background:var(--orange)}
-.division img{height:200px}
-.chips{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:7px 12px}
-.chips li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
-.dot{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
-.brands{font-size:13.5px;color:var(--muted);margin-top:14px}
-.cat{border-left:6px solid;border-radius:10px;background:#fff;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 18px}
-.cat h3{font-size:17px;margin-bottom:6px;color:var(--navy)} .cat p{margin:0;font-size:14px;color:#374151}
-.mission{background:var(--orange);color:#fff;border-radius:14px;padding:34px 38px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-.mission h3{font-size:26px;font-weight:800;letter-spacing:.04em} .mission p{margin:0;font-size:17px;font-style:italic;line-height:1.6}
-.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
-.timeline li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
-.timeline .yr{font-weight:800;color:var(--blue)} .timeline .ev{font-size:15px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:box-shadow .2s,transform .2s;box-shadow:0 2px 10px rgba(16,24,40,.04)}
+a.card:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
+.card img,.card .ph{height:170px;width:100%;object-fit:cover} .card .ph{background:linear-gradient(135deg,#e6f0fa,#d3e6f7)}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:19px;color:var(--navy)} .card p{margin:0;font-size:15.5px;color:#374151}
+.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:#eef4fb;color:var(--blue);margin-bottom:4px}
+.icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card.why{padding:26px 24px 24px;border-top:4px solid var(--blue)} .card.why:nth-child(even){border-top-color:var(--orange)} .card.why:nth-child(even) .icon{background:#fdeee9;color:var(--orange)}
+.card.why h3{margin-top:6px}
+.division .head{padding:20px 24px;color:#fff;font-family:var(--head);font-weight:800;font-size:22px;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center}
+.division .head small{font-family:var(--body);font-weight:600;font-size:13px;opacity:.9;letter-spacing:.08em}
+.division.hw .head{background:linear-gradient(100deg,var(--blue),var(--blue-d))} .division.hc .head{background:linear-gradient(100deg,var(--orange),var(--orange-d))}
+.division img{height:210px}
+.chips{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 8px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+.brands{font-size:14px;color:var(--muted);margin-top:16px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border-radius:var(--r);padding:22px 22px 20px;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;box-shadow:var(--sh);transition:transform .2s}
+.tile:hover{transform:translateY(-3px)}
+.tile:before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.14)}
+.tile h3{font-size:20px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.2)} .tile p{margin:6px 0 0;font-size:14px;opacity:.95}
+.mission{background:linear-gradient(100deg,var(--orange),var(--orange-d));color:#fff;border-radius:var(--r);padding:40px 44px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;box-shadow:var(--sh2)}
+.mission h3{font-size:26px;font-weight:800;letter-spacing:.06em} .mission p{margin:0;font-size:19px;font-style:italic;line-height:1.6}
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.timeline li{position:relative;padding:0 0 22px 34px}
+.timeline li:before{content:"";position:absolute;left:8px;top:8px;bottom:-8px;width:2px;background:#cfd9e6}
+.timeline li:after{content:"";position:absolute;left:2px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange);border:3px solid #fff;box-shadow:0 0 0 2px var(--orange)}
+.timeline .yr{display:block;font-family:var(--head);font-weight:800;color:var(--blue);font-size:18px} .timeline .ev{font-size:16px;color:#374151}
+/* branches */
 .branch-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
-.tag{font-weight:700;padding:3px 9px;border-radius:999px;color:#fff;background:var(--blue)} .tag.hc{background:var(--orange)} .tag.both{background:var(--navy)}
-.est{color:var(--muted)}
-.card dl{margin:6px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
-.card dl div{display:grid;grid-template-columns:62px 1fr;gap:6px;margin:4px 0} .card dt{color:var(--muted)} .card dd{margin:0}
-.net article{display:grid;grid-template-columns:200px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.net img{height:100%;width:100%;object-fit:cover;min-height:170px} .net div{padding:18px 18px 18px 0} .net h3{font-size:17px;color:var(--navy)} .net small{display:block;color:var(--muted);margin-bottom:8px} .net p{margin:4px 0;font-size:14px}
-.csr{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.csr .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px} .csr .pics img{border-radius:10px;height:150px;width:100%;object-fit:cover}
-table.contacts{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}
-table.contacts th,table.contacts td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-table.contacts th{background:#eef4fb;color:var(--navy);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.tag{font-weight:700;padding:4px 10px;border-radius:999px;color:#fff;background:var(--blue);font-size:12px;letter-spacing:.04em} .tag.hc{background:var(--orange)} .tag.both{background:var(--navy)}
+.est{color:var(--muted);font-weight:600}
+.card dl{margin:6px 0 0;padding-top:12px;border-top:1px dashed var(--line);font-size:14px}
+.card dl div{display:grid;grid-template-columns:64px 1fr;gap:6px;margin:5px 0} .card dt{color:var(--muted)} .card dd{margin:0}
+.mapwrap{background:var(--navy);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);position:relative}
+.mapwrap svg{display:block;width:100%;height:auto}
+.mapwrap .cap{position:absolute;left:22px;bottom:18px;color:#fff;font-family:var(--head);font-weight:700;font-size:14px;letter-spacing:.06em;opacity:.9}
+.map-split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.townlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.townlist a{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600;transition:box-shadow .15s}
+.townlist a:hover{box-shadow:var(--sh)} .townlist .pin{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:none}
+.townlist small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.net article{display:grid;grid-template-columns:200px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.net img{height:100%;width:100%;object-fit:cover;min-height:170px} .net div{padding:18px 18px 18px 0} .net h3{font-size:18px;color:var(--navy)} .net small{display:block;color:var(--muted);margin-bottom:8px} .net p{margin:4px 0;font-size:15px}
+.csr{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.csr .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px} .csr .pics img{border-radius:12px;height:170px;width:100%;object-fit:cover;box-shadow:var(--sh)}
+.csr .pics img:first-child{transform:translateY(18px)}
+table.contacts{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+table.contacts th,table.contacts td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.contacts th{background:var(--navy);color:#fff;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+table.contacts tr:hover td{background:#f8fafc}
 .tablewrap{overflow-x:auto}
 /* contact + footer */
-.contact{background:var(--navy);color:#fff} .contact h2{color:#fff} .contact a{color:#fff}
-.contact .grid3>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px}
-.contact h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-bottom:10px} .contact p{margin:4px 0;font-size:15px}
-footer{background:#10233d;color:#cbd5e1;font-size:13.5px;padding:34px 0 22px}
-footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:26px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:16px}
-footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
-footer ul{list-style:none;margin:0;padding:0} footer li{margin:5px 0} footer a{color:#cbd5e1;text-decoration:none} footer a:hover{color:#fff}
-footer img{height:30px;width:auto;margin-bottom:10px}
-footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#94a3b8}
-@media(max-width:1024px){.two,.grid2,.grid3,.csr,.timeline{grid-template-columns:1fr} .stats .wrap{grid-template-columns:1fr 1fr} .mission{grid-template-columns:1fr} .net article{grid-template-columns:1fr} .net div{padding:16px} footer .cols{grid-template-columns:1fr 1fr}
- .nav>ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);align-items:stretch;max-height:calc(100vh - 72px);overflow:auto}
- .nav>ul.open{display:flex} .nav>ul>li{border-top:1px solid var(--line)} .nav>ul>li>a{padding:14px 20px;border-radius:0}
+.contact{background:var(--navy);color:#fff;position:relative;overflow:hidden} .contact:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 90% 10%,rgba(29,174,221,.3),transparent 60%)}
+.contact .wrap{position:relative} .contact h2{color:#fff} .contact a{color:#fff}
+.contact .grid3>div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px}
+.contact h3{font-family:var(--body);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:10px} .contact p{margin:4px 0;font-size:16px}
+footer{background:#0f2340;color:#c7d2e0;font-size:14px;padding:44px 0 24px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:18px}
+footer h4{font-family:var(--body);color:#fff;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0} footer li{margin:6px 0} footer a{color:#c7d2e0;text-decoration:none} footer a:hover{color:#fff}
+footer img{height:32px;width:auto;margin-bottom:12px}
+footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8fa2ba}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease} .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(max-width:1024px){.two,.grid2,.grid3,.csr,.timeline,.map-split,.tiles{grid-template-columns:1fr} .tiles{grid-template-columns:1fr 1fr} .stats .grid{grid-template-columns:1fr 1fr} .mission{grid-template-columns:1fr} .net article{grid-template-columns:1fr} .net div{padding:16px} footer .cols{grid-template-columns:1fr 1fr}
+ .nav>ul{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);align-items:stretch;max-height:calc(100vh - 74px);overflow:auto}
+ .nav>ul.open{display:flex} .nav>ul>li{border-top:1px solid var(--line)} .nav>ul>li>a{padding:14px 20px;border-radius:0} .nav>ul>li>a:after{display:none}
  .nav .sub{position:static;display:block;border:0;box-shadow:none;padding:0 0 8px 20px;margin:0} .nav .cta{margin:10px 20px 14px;text-align:center}
- .burger{display:block} .hero h1{font-size:28px} .hero img.bg{height:200px} section{padding:44px 0} h2{font-size:25px} .banner h1{font-size:27px}}
+ .burger{display:block} .hero h1{font-size:34px} .hero .inner{padding:56px 0 120px} .hero p.lead{font-size:17px} section{padding:56px 0} h2{font-size:28px} .banner h1{font-size:30px} .stat b{font-size:28px} .csr .pics img:first-child{transform:none}}
+@media(max-width:560px){.stats .grid{grid-template-columns:1fr 1fr;gap:10px} .stat{padding:16px} .tiles{grid-template-columns:1fr} .townlist{grid-template-columns:1fr} .btn.w{margin:10px 0 0}}
 </style>
 </head>
 <body>
@@ -115,7 +161,8 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
 </div></header>
 <main>
 <div class="banner"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> › Our Branches</div><h1>Our Branches</h1><p>Nine Hardware and Home Centre stores across Port Moresby, Lae, Madang, Kokopo, Rabaul and Kimbe.</p></div></div>
-<section><div class="wrap"><div class="grid3"><article class="card" id="pom_hw"><img src="img-pom_hw.jpg" alt="Port Moresby Hardware team" loading="lazy"><div class="body"><div class="branch-top"><span class="tag hw">Hardware</span><span class="est">Est. June 1994</span></div><h3>Port Moresby Hardware</h3><p>Our first hardware store, opened in June 1994 and trading as Pacific NBM Housing Pty Ltd. Full operations commenced in 1997; today more than 100 national employees work here full time.</p><dl>
+<section class="rv tight"><div class="wrap map-split"><div class="mapwrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 712.5" role="img" aria-label="Map of Papua New Guinea showing BNBM branch locations"><rect width="1000" height="712.5" fill="#1b3a63"/><g fill="#1daedd" stroke="#0f2a4d" stroke-width="1.2"><path d="M779.2,247.3 L774.5,252.0 L771.6,247.6 L768.0,243.7 L765.0,239.8 L761.2,231.2 L761.2,226.9 L762.1,222.3 L762.3,217.6 L760.5,208.2 L756.3,199.7 L741.0,179.2 L736.2,173.9 L730.8,169.1 L727.2,167.9 L720.3,166.7 L717.1,165.9 L711.3,162.5 L705.9,158.6 L692.4,147.1 L685.4,143.9 L681.6,139.8 L660.4,126.8 L654.3,123.8 L646.7,123.8 L640.4,121.2 L645.3,119.5 L646.5,115.2 L645.3,110.8 L655.9,118.0 L667.2,124.3 L670.3,129.4 L675.9,129.7 L686.1,133.9 L692.8,137.7 L699.3,142.0 L706.8,148.3 L720.7,153.2 L722.7,155.0 L729.9,163.2 L739.4,170.1 L742.5,173.9 L782.4,206.6 L789.1,215.8 L789.6,222.1 L788.2,224.5 L783.9,229.8 L784.2,236.1 L782.8,241.6 L779.2,247.3Z"/><path d="M713.5,218.5 L716.7,219.8 L726.1,213.3 L731.1,217.8 L737.4,220.0 L744.1,221.3 L741.4,230.7 L742.3,235.0 L743.9,239.3 L743.7,245.7 L740.7,251.4 L734.9,259.6 L732.2,261.2 L729.3,262.1 L719.6,262.8 L717.8,267.1 L718.5,271.8 L723.6,278.0 L727.7,284.8 L723.6,291.2 L716.9,295.5 L710.4,297.8 L699.8,296.5 L688.5,297.1 L686.3,299.4 L686.3,303.5 L684.7,306.5 L682.7,309.2 L677.1,315.0 L670.5,319.9 L662.0,324.8 L659.1,325.9 L651.2,326.7 L644.2,329.5 L641.3,332.2 L637.9,334.4 L630.5,336.8 L623.3,341.4 L620.6,342.3 L605.7,343.1 L584.4,343.3 L578.1,343.8 L572.0,343.2 L568.6,341.3 L561.4,332.7 L555.1,329.9 L548.4,329.9 L539.1,333.0 L537.3,332.3 L519.3,319.7 L513.7,316.7 L507.9,314.4 L500.7,312.8 L493.9,310.3 L489.9,304.3 L490.3,296.5 L495.7,292.0 L504.0,294.2 L507.2,294.2 L510.3,292.9 L513.9,293.4 L517.8,294.4 L531.3,292.8 L538.9,295.2 L546.6,298.4 L553.8,299.0 L561.0,298.4 L570.6,294.8 L573.8,295.2 L583.2,295.2 L591.3,290.4 L594.5,271.2 L596.5,264.7 L599.4,263.2 L601.5,263.6 L604.4,266.9 L600.6,271.0 L598.8,274.2 L598.3,281.9 L600.3,289.3 L605.3,295.2 L612.5,296.0 L619.0,292.1 L626.2,291.3 L633.0,295.1 L639.7,294.4 L642.9,292.0 L646.5,290.9 L650.1,290.4 L653.2,289.0 L657.7,282.5 L660.6,275.2 L664.9,269.6 L676.6,260.1 L680.0,258.9 L683.8,258.2 L692.1,258.6 L698.2,255.2 L698.7,247.6 L697.8,239.8 L690.8,221.6 L690.3,218.7 L691.2,215.5 L693.3,212.5 L700.2,212.5 L707.4,213.5 L710.4,216.3 L713.5,218.5Z"/><path d="M29.7,519.9 L29.7,519.0 L29.7,506.3 L29.7,493.7 L29.7,481.0 L29.7,468.3 L29.7,455.6 L29.7,442.9 L29.7,430.2 L29.7,417.5 L29.7,404.8 L29.7,392.0 L29.7,381.6 L26.1,377.5 L22.8,371.3 L23.4,363.2 L27.7,353.3 L29.7,346.6 L29.7,341.2 L29.7,328.5 L29.7,315.8 L29.7,303.1 L29.7,290.4 L29.7,277.6 L29.7,264.9 L29.7,252.2 L29.7,239.5 L29.7,226.9 L29.7,214.2 L29.7,201.5 L29.7,188.8 L29.7,176.1 L29.7,163.4 L29.5,150.6 L29.5,137.9 L29.5,125.2 L29.5,117.6 L29.5,113.4 L29.5,113.1 L31.5,113.1 L37.8,113.3 L42.8,114.2 L74.3,127.8 L83.5,133.2 L86.7,134.5 L89.8,134.6 L93.0,135.2 L106.9,142.8 L128.1,150.3 L150.3,157.5 L157.3,159.0 L164.3,159.7 L179.8,162.2 L188.1,164.5 L200.1,173.4 L206.1,176.1 L211.8,181.1 L219.6,186.5 L223.0,187.8 L226.4,188.4 L234.3,188.7 L242.1,187.7 L245.5,188.1 L248.7,189.1 L251.6,190.9 L252.9,194.5 L257.9,199.6 L264.9,201.8 L271.4,206.3 L277.5,211.8 L281.7,217.2 L286.7,221.9 L294.3,223.8 L302.2,224.0 L329.2,251.5 L330.6,255.7 L330.8,273.6 L327.9,287.6 L334.6,292.0 L343.6,293.6 L356.7,296.6 L369.0,301.1 L408.4,319.9 L413.8,321.6 L421.7,322.2 L429.8,321.9 L432.7,322.9 L438.6,326.3 L441.7,328.5 L447.1,334.7 L451.8,341.3 L453.9,343.2 L456.3,344.7 L457.7,348.3 L459.7,359.4 L459.0,366.4 L457.0,369.0 L450.7,370.2 L428.4,371.4 L413.8,370.1 L403.5,377.1 L403.0,380.2 L403.9,383.1 L412.9,398.0 L418.1,411.1 L422.6,416.5 L429.1,420.9 L435.0,426.1 L440.4,431.9 L451.6,442.2 L457.7,446.1 L464.7,448.4 L476.6,456.4 L478.2,460.0 L481.8,471.2 L483.1,478.7 L483.3,481.8 L484.2,484.6 L494.6,491.5 L497.1,493.4 L501.6,508.6 L505.2,515.7 L511.2,518.3 L518.2,518.1 L537.3,513.5 L540.0,513.4 L543.6,514.5 L546.8,517.0 L547.7,523.8 L544.8,531.0 L543.9,537.9 L547.7,543.6 L557.4,548.0 L561.0,549.3 L578.5,550.7 L585.3,551.9 L592.0,553.8 L594.5,555.5 L592.7,558.5 L589.3,560.1 L585.3,560.7 L578.7,562.9 L579.0,566.8 L582.6,570.9 L585.9,575.8 L588.6,577.6 L591.8,578.8 L599.2,580.5 L606.6,582.8 L611.6,585.2 L616.5,586.9 L627.3,587.9 L635.4,591.1 L646.9,589.8 L637.0,594.9 L633.6,596.1 L621.7,594.2 L619.5,596.2 L624.4,601.6 L631.6,605.3 L634.3,607.4 L632.3,609.9 L624.0,614.9 L620.4,615.5 L613.8,615.9 L602.6,613.8 L594.7,611.1 L592.7,607.4 L590.4,605.2 L583.5,599.9 L578.3,597.1 L572.0,596.1 L565.2,596.2 L553.3,593.2 L527.2,591.0 L521.1,589.7 L513.3,585.4 L509.7,584.8 L505.6,586.1 L495.7,587.0 L492.8,586.6 L485.6,583.1 L478.2,581.8 L475.0,582.7 L471.9,583.1 L462.0,580.5 L454.3,579.4 L448.0,575.8 L444.6,572.5 L440.8,569.5 L437.2,561.9 L431.8,554.6 L424.8,548.8 L410.2,539.1 L407.3,536.7 L401.7,527.9 L401.9,522.1 L403.9,516.2 L400.8,518.3 L397.2,518.0 L387.3,514.1 L383.2,509.5 L376.5,496.9 L372.2,490.2 L362.3,478.5 L359.4,471.5 L355.3,465.4 L352.6,463.2 L350.6,460.6 L348.6,457.1 L345.9,454.8 L331.9,449.5 L329.4,447.9 L326.7,447.0 L316.4,446.5 L310.5,445.6 L299.3,441.4 L293.4,440.1 L286.5,439.3 L279.7,437.7 L276.3,436.0 L274.1,433.3 L272.7,426.9 L267.1,427.7 L261.5,426.6 L256.1,424.3 L250.7,422.9 L246.9,424.9 L245.7,430.0 L243.9,430.2 L240.8,429.2 L239.2,429.7 L235.6,432.1 L232.9,435.3 L227.7,434.8 L217.2,431.6 L212.4,429.6 L208.4,426.0 L205.0,421.8 L201.4,418.7 L197.1,416.3 L202.5,421.8 L215.1,446.6 L212.0,447.0 L208.8,446.3 L211.8,451.1 L208.4,451.8 L205.0,451.8 L197.8,449.7 L190.8,449.1 L188.6,450.0 L190.2,451.8 L192.6,457.1 L194.7,462.5 L184.3,465.0 L174.0,466.5 L162.3,469.5 L150.3,469.7 L144.3,467.9 L138.0,467.0 L132.1,467.9 L126.5,470.1 L121.8,469.8 L118.6,465.9 L117.3,462.9 L115.5,460.5 L111.0,460.9 L106.7,462.2 L114.1,462.4 L116.4,465.7 L118.2,469.6 L123.3,473.0 L129.9,471.0 L143.6,471.5 L157.1,477.7 L160.2,478.5 L163.2,479.7 L170.1,485.7 L175.5,491.3 L179.8,497.7 L180.7,500.2 L180.5,506.8 L179.1,510.0 L170.4,514.7 L161.1,518.3 L147.4,525.1 L134.1,533.0 L127.2,531.4 L120.9,527.3 L118.6,526.2 L112.1,523.9 L108.0,523.2 L92.5,524.9 L76.8,525.8 L70.0,525.7 L63.7,524.4 L56.5,521.9 L49.5,523.1 L44.8,525.9 L39.6,526.3 L29.7,519.9Z"/><path d="M470.3,314.2 L467.8,314.6 L466.7,311.8 L460.8,309.3 L455.0,301.7 L455.2,295.1 L455.9,293.3 L459.3,293.1 L472.1,300.7 L473.4,303.1 L472.5,310.3 L470.3,314.2Z"/><path d="M345.0,245.4 L340.7,247.3 L337.8,245.8 L336.4,241.7 L337.5,237.8 L341.1,234.7 L343.4,233.7 L346.1,235.9 L347.0,240.0 L345.0,245.4Z"/><path d="M725.0,134.2 L724.3,137.3 L722.3,137.2 L716.9,131.0 L716.0,129.4 L717.1,127.9 L723.4,132.3 L725.0,134.2Z"/><path d="M579.2,47.1 L579.0,49.3 L574.5,48.2 L573.1,48.5 L565.5,42.0 L565.5,38.0 L567.5,34.6 L570.9,35.1 L576.5,39.4 L579.2,47.1Z"/><path d="M661.3,576.2 L664.0,576.2 L668.5,571.6 L672.3,570.1 L674.8,572.3 L670.8,587.2 L667.2,584.9 L653.7,580.8 L653.2,574.9 L649.8,573.0 L647.6,567.2 L643.1,560.9 L642.2,556.8 L644.9,558.5 L647.6,562.7 L659.5,571.2 L659.1,573.9 L661.3,576.2Z"/><path d="M615.4,543.3 L614.5,544.9 L610.9,543.8 L600.6,535.1 L602.1,528.7 L606.9,525.4 L613.8,529.0 L616.1,534.3 L616.8,537.3 L615.4,543.3Z"/><path d="M662.9,495.8 L664.0,500.3 L659.1,495.5 L661.3,490.1 L661.8,487.1 L661.5,485.5 L656.6,482.7 L659.1,478.1 L662.0,476.6 L663.6,476.2 L663.6,482.6 L664.9,485.5 L662.9,495.8Z"/><path d="M861.3,660.1 L860.4,663.5 L858.2,662.4 L851.4,664.1 L847.8,663.7 L845.8,660.6 L845.1,659.2 L851.2,660.3 L850.1,656.9 L858.6,658.7 L861.3,660.1Z"/><path d="M192.9,480.1 L190.2,480.3 L179.1,476.1 L176.4,472.9 L189.3,473.7 L192.6,474.5 L193.3,478.8 L192.9,480.1Z"/><path d="M417.2,289.5 L413.8,289.8 L408.0,283.9 L406.6,281.6 L407.3,278.6 L414.5,274.4 L419.2,278.2 L420.1,286.3 L417.2,289.5Z"/><path d="M410.4,72.5 L431.4,76.6 L432.7,76.5 L432.5,75.1 L432.7,74.6 L434.1,75.7 L433.6,78.6 L430.2,79.4 L427.3,79.1 L425.1,80.7 L419.2,86.3 L415.2,85.4 L410.2,86.7 L401.7,86.8 L390.4,84.3 L387.5,86.5 L383.4,85.8 L379.6,88.2 L377.8,88.1 L376.9,84.6 L377.1,82.9 L381.6,81.4 L381.0,76.0 L384.8,73.3 L391.3,73.7 L397.4,71.8 L410.4,72.5Z"/><path d="M621.0,116.4 L608.7,117.3 L604.2,116.3 L600.1,112.7 L596.5,107.1 L592.9,105.8 L591.3,104.6 L600.1,100.3 L608.0,99.0 L620.6,104.4 L621.9,107.1 L621.9,108.8 L621.7,114.6 L621.0,116.4Z"/><path d="M626.9,534.1 L635.7,539.3 L640.4,537.8 L643.1,538.6 L648.7,544.5 L648.9,548.9 L649.8,552.6 L649.6,554.2 L646.5,556.5 L646.7,553.9 L644.4,553.4 L636.1,553.5 L629.8,551.9 L621.0,551.5 L624.6,547.6 L625.5,546.1 L620.8,539.7 L620.8,536.6 L621.0,535.0 L624.9,534.1 L626.9,534.1Z"/><path d="M758.3,509.9 L761.9,510.9 L769.3,510.5 L771.8,514.1 L775.4,515.2 L778.3,516.9 L781.0,519.3 L781.0,520.7 L780.3,522.0 L778.8,523.1 L779.2,525.6 L776.5,525.2 L772.9,526.5 L766.2,523.6 L763.7,523.0 L763.0,520.3 L758.7,516.1 L750.9,513.1 L754.9,510.6 L758.3,509.9Z"/><path d="M814.8,667.3 L825.1,670.5 L828.7,674.2 L824.9,675.8 L815.9,676.9 L813.6,674.7 L804.9,672.5 L803.5,668.4 L799.2,669.9 L801.5,666.9 L795.9,663.8 L794.3,659.4 L794.1,657.7 L800.4,659.8 L814.8,667.3Z"/><path d="M193.1,489.6 L194.2,492.4 L185.2,488.6 L176.4,482.3 L172.2,480.6 L169.2,476.5 L174.6,479.6 L183.9,482.5 L193.1,489.6Z"/><path d="M461.1,92.7 L459.0,96.0 L454.3,95.7 L452.3,94.7 L455.7,94.0 L457.0,91.3 L458.6,90.5 L461.1,92.7Z"/><path d="M966.2,367.9 L964.6,373.8 L963.5,374.7 L961.9,372.6 L956.5,374.7 L954.0,377.1 L951.1,379.0 L944.8,378.5 L938.7,376.9 L932.9,373.9 L927.7,370.1 L922.5,364.1 L919.4,357.9 L921.0,350.8 L918.9,344.3 L909.0,339.6 L906.8,338.1 L902.5,331.7 L898.2,328.8 L892.6,323.2 L891.3,320.7 L888.8,313.5 L888.1,309.2 L890.1,296.6 L889.2,290.3 L891.9,290.9 L894.9,293.4 L898.2,295.1 L906.1,296.3 L912.2,301.3 L917.8,311.0 L918.7,314.3 L920.5,316.6 L926.4,320.7 L929.5,323.4 L935.4,334.1 L938.7,336.3 L942.6,337.3 L946.2,338.8 L952.2,343.5 L957.6,348.8 L961.5,354.3 L964.2,360.3 L966.2,367.9Z"/><path d="M884.3,289.6 L882.9,290.0 L880.2,282.2 L879.8,276.3 L878.9,272.0 L877.5,269.4 L881.6,264.7 L883.4,263.4 L886.3,265.9 L886.8,271.4 L889.2,276.1 L887.4,286.4 L884.3,289.6Z"/></g><a href="branches.html#pom_hw"><circle cx="417.5" cy="540.0" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="417.5" cy="540.0" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="227.5" y="570.0" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Port Moresby</text></a><a href="branches.html#lae_hw"><circle cx="406.2" cy="370.6" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="406.2" cy="370.6" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="420.2" y="376.6" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Lae</text></a><a href="branches.html#madang"><circle cx="330.6" cy="276.2" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="330.6" cy="276.2" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="212.60000000000002" y="262.2" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Madang</text></a><a href="branches.html#kokopo"><circle cx="735.0" cy="221.9" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="735.0" cy="221.9" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="749.0" y="243.9" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Kokopo</text></a><a href="branches.html#rabaul"><circle cx="729.4" cy="212.5" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="729.4" cy="212.5" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="743.4" y="204.5" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Rabaul</text></a><a href="branches.html#kimbe"><circle cx="603.1" cy="296.9" r="16" fill="rgba(235,92,58,.35)"><animate attributeName="r" values="12;22;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="603.1" cy="296.9" r="8" fill="#eb5c3a" stroke="#fff" stroke-width="3"/><text x="617.1" y="302.9" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#1b3a63" stroke-width="4">Kimbe</text></a></svg><div class="cap">OUR BRANCH NETWORK · PAPUA NEW GUINEA</div></div><div><div class="kicker">Where to find us</div><h2 class="sm">Six locations across the country</h2><ul class="townlist"><li><a href="branches.html#pom_hw"><span class="pin"></span><span>Port Moresby<small>3 stores · Hardware ×2, Home Centre</small></span></a></li><li><a href="branches.html#lae_hw"><span class="pin"></span><span>Lae<small>2 stores · Hardware, Home Centre</small></span></a></li><li><a href="branches.html#madang"><span class="pin"></span><span>Madang<small>Hardware &amp; Home Centre</small></span></a></li><li><a href="branches.html#kokopo"><span class="pin"></span><span>Kokopo<small>Hardware &amp; Home Centre</small></span></a></li><li><a href="branches.html#rabaul"><span class="pin"></span><span>Rabaul<small>Hardware &amp; Home Centre</small></span></a></li><li><a href="branches.html#kimbe"><span class="pin"></span><span>Kimbe<small>Hardware &amp; Home Centre</small></span></a></li></ul></div></div></section>
+<section class="rv alt"><div class="wrap"><div class="grid3"><article class="card" id="pom_hw"><img src="img-pom_hw.jpg" alt="Port Moresby Hardware team" loading="lazy"><div class="body"><div class="branch-top"><span class="tag hw">Hardware</span><span class="est">Est. June 1994</span></div><h3>Port Moresby Hardware</h3><p>Our first hardware store, opened in June 1994 and trading as Pacific NBM Housing Pty Ltd. Full operations commenced in 1997; today more than 100 national employees work here full time.</p><dl>
         <div><dt>Address</dt><dd>Kennedy Road, Gordons, NCD<br>P.O. Box 466, Boroko</dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+6753251135">+675 325 1135</a> &nbsp;·&nbsp; Fax 325 7393</dd></div>
         <div><dt>Email</dt><dd><a href="mailto:bnbmpomoffice@gmail.com">bnbmpomoffice@gmail.com</a></dd></div>
@@ -161,7 +208,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
         <div><dt>Email</dt><dd><a href="mailto:bnbmkimbe@hotmail.com">bnbmkimbe@hotmail.com</a></dd></div>
         <div><dt>Map</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=BNBM+Kimbe+Branch+Kimbe+Papua+New+Guinea" target="_blank" rel="noopener">Open in Google Maps</a></dd></div>
       </dl></div></article></div></div></section>
-<section class="alt"><div class="wrap"><div class="kicker">Quick reference</div><h2 class="sm">All branch contacts</h2><div class="tablewrap"><table class="contacts">
+<section class="rv"><div class="wrap"><div class="kicker">Quick reference</div><h2 class="sm">All branch contacts</h2><div class="tablewrap"><table class="contacts">
 <tr><th>Branch</th><th>Address</th><th>Phone</th><th>Fax</th><th>Email</th></tr>
 <tr><td><b>Port Moresby Hardware</b></td><td>Kennedy Road, Gordons, NCD<br><small>P.O. Box 466, Boroko</small></td><td><a href="tel:+6753251135">+675 325 1135</a></td><td>325 7393</td><td><a href="mailto:bnbmpomoffice@gmail.com">bnbmpomoffice@gmail.com</a></td></tr><tr><td><b>Port Moresby Home Centre</b></td><td>Kennedy Road, Gordons, NCD<br><small>P.O. Box 466, Boroko</small></td><td><a href="tel:+6753250633">+675 325 0633</a></td><td>325 0866</td><td><a href="mailto:homecentrepom@hotmail.com">homecentrepom@hotmail.com</a></td></tr><tr><td><b>Port Moresby Varahe Hardware</b></td><td>Varahe Street, NCD<br><small>P.O. Box 466, Boroko</small></td><td><a href="tel:+6753255610">+675 325 5610</a></td><td>325 9733</td><td><a href="mailto:bnbmvarahe@gmail.com">bnbmvarahe@gmail.com</a></td></tr><tr><td><b>Lae Hardware</b></td><td>Josey Street, Lae, Morobe Province<br><small>P.O. Box 2699, Lae</small></td><td><a href="tel:+6754726966">+675 472 6966</a></td><td>472 6968</td><td><a href="mailto:bnbmlae@global.net.pg">bnbmlae@global.net.pg</a></td></tr><tr><td><b>Lae Home Centre</b></td><td>Josey Street, Lae, Morobe Province<br><small>P.O. Box 524, Lae</small></td><td><a href="tel:+6754727099">+675 472 7099</a></td><td>472 2005</td><td><a href="mailto:bnbmhclae@hotmail.com">bnbmhclae@hotmail.com</a></td></tr><tr><td><b>Madang Branch</b></td><td>Modillon Road, Madang, Madang Province<br><small>P.O. Box 198, Madang</small></td><td><a href="tel:+6754221510">+675 422 1510</a></td><td>422 1898</td><td><a href="mailto:bnbmmadang@global.net.pg">bnbmmadang@global.net.pg</a></td></tr><tr><td><b>Kokopo Branch</b></td><td>Williams Road, Kokopo, East New Britain<br><small>P.O. Box 2201, Rabaul</small></td><td><a href="tel:+6759829580">+675 982 9580</a></td><td>982 9581</td><td><a href="mailto:bnbmkokopo@online.net.pg">bnbmkokopo@online.net.pg</a></td></tr><tr><td><b>Rabaul Branch</b></td><td>Malaguna Road, Rabaul, East New Britain<br><small>P.O. Box 2201, Rabaul</small></td><td><a href="tel:+6759822219">+675 982 2219</a></td><td>982 2708</td><td><a href="mailto:bnbmrabaul@online.net.pg">bnbmrabaul@online.net.pg</a></td></tr><tr><td><b>Kimbe Branch</b></td><td>Sikal Street, Kimbe, West New Britain<br><small>P.O. Box 693, Kimbe</small></td><td><a href="tel:+6759835517">+675 983 5517</a></td><td>983 5516</td><td><a href="mailto:bnbmkimbe@hotmail.com">bnbmkimbe@hotmail.com</a></td></tr>
 </table></div></div></section>
@@ -176,5 +223,10 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
   </div>
   <div class="bottom"><span>&copy; 2026 BNBM PNG Limited. All rights reserved.</span><span>www.bnbmpng.com</span></div>
 </div></footer>
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
 </body>
 </html>

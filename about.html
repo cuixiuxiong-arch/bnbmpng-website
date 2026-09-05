@@ -9,102 +9,148 @@
 <meta property="og:title" content="About BNBM PNG — Introduction, History, Structure | BNBM PNG Limited"><meta property="og:description" content="Introduction to BNBM PNG Limited: our history since 1992, company structure under the CNBM Group, mission and regional group network."><meta property="og:image" content="https://www.bnbmpng.com/img-hero.jpg"><meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23266fb3'/><text x='32' y='42' font-family='Arial' font-weight='bold' font-size='26' text-anchor='middle' fill='white'>B</text></svg>">
 <style>
-:root{--blue:#266fb3;--cyan:#1daedd;--orange:#eb5c3a;--navy:#1b3a63;--ink:#1f2937;--muted:#5b6472;--line:#e5e7eb;--bg:#f6f8fb;--w:1120px}
+@font-face{font-family:"Montserrat";font-weight:800;font-display:swap;src:url(montserrat-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:700;font-display:swap;src:url(montserrat-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-weight:400;font-display:swap;src:url(source-sans-3-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-weight:600;font-display:swap;src:url(source-sans-3-latin-600-normal.woff2) format("woff2")}
+:root{--blue:#266fb3;--blue-d:#1d5a94;--cyan:#1daedd;--orange:#eb5c3a;--orange-d:#d24b2b;--navy:#1b3a63;--ink:#1f2937;--muted:#5b6472;--line:#e5e7eb;--bg:#f4f7fb;--w:1140px;
+ --head:"Montserrat","Segoe UI",Arial,sans-serif;--body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;--r:14px;--sh:0 10px 30px rgba(16,24,40,.08);--sh2:0 18px 44px rgba(16,24,40,.14)}
 *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
-img{max-width:100%;display:block} a{color:var(--blue)} h1,h2,h3,h4{line-height:1.2;margin:0}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
-/* header + dropdown nav */
-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.nav .logo img{height:38px;width:auto}
-.nav>ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;align-items:center}
+body{margin:0;font-family:var(--body);font-size:17px;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block} a{color:var(--blue)} h1,h2,h3,h4{font-family:var(--head);line-height:1.15;margin:0;letter-spacing:-.01em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 22px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.nav .logo img{height:40px;width:auto}
+.nav>ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;align-items:center}
 .nav>ul>li{position:relative}
-.nav>ul>li>a{display:block;padding:10px 11px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;border-radius:8px;white-space:nowrap}
-.nav>ul>li>a:hover,.nav>ul>li.on>a{color:var(--blue);background:#eef4fb}
-.nav .sub{display:none;position:absolute;top:100%;left:0;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(16,24,40,.12);padding:8px;list-style:none;margin:6px 0 0;z-index:60}
-.nav .sub a{display:block;padding:9px 12px;border-radius:7px;text-decoration:none;color:var(--ink);font-size:14px}
+.nav>ul>li>a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px;white-space:nowrap;position:relative}
+.nav>ul>li>a:after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--orange);transform:scaleX(0);transition:transform .2s;transform-origin:left}
+.nav>ul>li>a:hover:after,.nav>ul>li.on>a:after{transform:scaleX(1)}
+.nav>ul>li>a:hover,.nav>ul>li.on>a{color:var(--blue)}
+.nav .sub{display:none;position:absolute;top:100%;left:0;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh2);padding:8px;list-style:none;margin:8px 0 0;z-index:60}
+.nav .sub:before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px}
+.nav .sub a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:15px}
 .nav .sub a:hover{background:#eef4fb;color:var(--blue)}
 .nav>ul>li:hover>.sub,.nav>ul>li:focus-within>.sub{display:block}
-.nav .cta{background:var(--orange);color:#fff!important;padding:10px 16px;border-radius:8px;margin-left:8px}
-.nav .cta:hover{background:#d94e2e!important}
+.nav .cta{background:var(--orange);color:#fff!important;padding:11px 18px;border-radius:9px;margin-left:8px;box-shadow:0 6px 16px rgba(235,92,58,.3)}
+.nav .cta:after{display:none} .nav .cta:hover{background:var(--orange-d)!important}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:18px}
-/* hero + page banners */
-.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
-.hero img.bg{width:100%;height:380px;object-fit:cover;object-position:center top}
-.hero .band{background:var(--blue);padding:46px 0 50px}
-.hero h1{font-size:40px;font-weight:800;letter-spacing:-.01em;max-width:780px}
-.hero p.lead{font-size:18px;max-width:720px;margin:14px 0 26px;opacity:.95}
-.btn{display:inline-block;padding:12px 20px;border-radius:9px;font-weight:700;text-decoration:none;font-size:15px}
-.btn.o{background:var(--orange);color:#fff} .btn.w{background:#fff;color:var(--blue);margin-left:10px} .btn.b{background:var(--blue);color:#fff}
-.stats{background:var(--orange);color:#fff}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px 20px}
-.stats div{text-align:center} .stats b{display:block;font-size:26px;line-height:1.1} .stats span{font-size:13px;opacity:.95}
-.banner{background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;padding:46px 0}
-.banner h1{font-size:34px;font-weight:800} .banner p{margin:8px 0 0;font-size:17px;opacity:.92;max-width:760px}
-.crumb{font-size:13px;opacity:.85;margin-bottom:10px} .crumb a{color:#fff;text-decoration:none}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--navy);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;background:url(img-hero.jpg) center 30%/cover no-repeat;opacity:.55;z-index:-2;filter:saturate(1.1)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,36,66,.96) 0%,rgba(15,36,66,.85) 45%,rgba(15,36,66,.35) 100%);z-index:-1}
+.hero .inner{padding:84px 0 150px;max-width:760px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#ffd9cf;margin-bottom:18px}
+.hero .eyebrow:before{content:"";width:34px;height:3px;background:var(--orange);border-radius:2px}
+.hero h1{font-size:50px;font-weight:800;line-height:1.08;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.hero p.lead{font-size:20px;max-width:640px;margin:20px 0 32px;opacity:.95}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-family:var(--head);font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.o{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(235,92,58,.35)} .btn.w{background:#fff;color:var(--navy);margin-left:12px} .btn.b{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(38,111,179,.3)}
+.stats{position:relative;z-index:2;margin-top:-84px}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:#fff;border-radius:var(--r);padding:22px 22px 20px;box-shadow:var(--sh2);border-top:4px solid var(--orange)}
+.stat:nth-child(2){border-top-color:var(--blue)} .stat:nth-child(3){border-top-color:var(--cyan)} .stat:nth-child(4){border-top-color:var(--navy)}
+.stat b{display:block;font-family:var(--head);font-size:34px;font-weight:800;color:var(--navy);line-height:1} .stat span{display:block;margin-top:6px;font-size:14px;color:var(--muted);font-weight:600}
+/* page banner */
+.banner{position:relative;background:var(--navy);color:#fff;padding:60px 0 58px;overflow:hidden}
+.banner:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 300px at 85% 20%,rgba(29,174,221,.35),transparent 60%),radial-gradient(600px 260px at 10% 100%,rgba(235,92,58,.35),transparent 60%)}
+.banner .wrap{position:relative}
+.banner h1{font-size:40px;font-weight:800} .banner p{margin:10px 0 0;font-size:19px;opacity:.9;max-width:760px}
+.crumb{font-size:13px;opacity:.8;margin-bottom:12px;font-weight:600;letter-spacing:.04em} .crumb a{color:#fff;text-decoration:none}
 /* sections */
-section{padding:60px 0} section.alt{background:var(--bg)}
-.kicker{color:var(--orange);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:8px}
-h2{font-size:30px;color:var(--navy);margin-bottom:18px} h2.sm{font-size:24px}
-.more{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none} .more:after{content:" →"}
-.two{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
-.prose p{font-size:16.5px;color:#374151}
-.structure{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
-.structure h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+section{padding:84px 0} section.alt{background:var(--bg)} section.tight{padding:56px 0}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--orange);font-family:var(--head);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;margin-bottom:12px}
+.kicker:before{content:"";width:26px;height:3px;background:var(--orange);border-radius:2px}
+h2{font-size:36px;font-weight:800;color:var(--navy);margin-bottom:22px} h2.sm{font-size:28px}
+.sub-h{font-size:18px;color:var(--muted);max-width:720px;margin:-8px 0 30px}
+.more{display:inline-block;margin-top:16px;font-family:var(--head);font-weight:700;text-decoration:none;font-size:15px} .more:after{content:" →";transition:margin .15s} .more:hover:after{margin-left:4px}
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.prose p{font-size:17.5px;color:#374151}
+.structure{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.structure h3{font-family:var(--body);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
 .structure ol{list-style:none;margin:0;padding:0}
-.structure li{padding:9px 12px;border-radius:8px;margin:6px 0;font-weight:600;font-size:14.5px;background:#fbe9e4;color:#7a2d1a}
+.structure li{padding:10px 14px;border-radius:9px;margin:6px 0;font-weight:600;font-size:15px;background:#fbe9e4;color:#7a2d1a}
 .structure li.b{background:#e6f0fa;color:var(--navy)} .structure li.l{background:var(--blue);color:#fff}
-.structure li small{display:block;font-weight:400;font-size:12.5px;opacity:.85}
+.structure li small{display:block;font-weight:400;font-size:13px;opacity:.85}
 /* cards */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:box-shadow .15s,transform .15s}
-a.card:hover{box-shadow:0 12px 28px rgba(16,24,40,.10);transform:translateY(-2px)}
-.card img,.card .ph{height:160px;width:100%;object-fit:cover} .card .ph{background:linear-gradient(135deg,#e6f0fa,#d3e6f7)}
-.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:18px;color:var(--navy)} .card p{margin:0;font-size:14.5px;color:#374151}
-.division .head{padding:18px 22px;color:#fff;font-weight:800;font-size:22px;letter-spacing:.02em}
-.division.hw .head{background:var(--blue)} .division.hc .head{background:var(--orange)}
-.division img{height:200px}
-.chips{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:7px 12px}
-.chips li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
-.dot{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
-.brands{font-size:13.5px;color:var(--muted);margin-top:14px}
-.cat{border-left:6px solid;border-radius:10px;background:#fff;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 18px}
-.cat h3{font-size:17px;margin-bottom:6px;color:var(--navy)} .cat p{margin:0;font-size:14px;color:#374151}
-.mission{background:var(--orange);color:#fff;border-radius:14px;padding:34px 38px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-.mission h3{font-size:26px;font-weight:800;letter-spacing:.04em} .mission p{margin:0;font-size:17px;font-style:italic;line-height:1.6}
-.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
-.timeline li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
-.timeline .yr{font-weight:800;color:var(--blue)} .timeline .ev{font-size:15px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:box-shadow .2s,transform .2s;box-shadow:0 2px 10px rgba(16,24,40,.04)}
+a.card:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
+.card img,.card .ph{height:170px;width:100%;object-fit:cover} .card .ph{background:linear-gradient(135deg,#e6f0fa,#d3e6f7)}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:19px;color:var(--navy)} .card p{margin:0;font-size:15.5px;color:#374151}
+.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:#eef4fb;color:var(--blue);margin-bottom:4px}
+.icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card.why{padding:26px 24px 24px;border-top:4px solid var(--blue)} .card.why:nth-child(even){border-top-color:var(--orange)} .card.why:nth-child(even) .icon{background:#fdeee9;color:var(--orange)}
+.card.why h3{margin-top:6px}
+.division .head{padding:20px 24px;color:#fff;font-family:var(--head);font-weight:800;font-size:22px;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center}
+.division .head small{font-family:var(--body);font-weight:600;font-size:13px;opacity:.9;letter-spacing:.08em}
+.division.hw .head{background:linear-gradient(100deg,var(--blue),var(--blue-d))} .division.hc .head{background:linear-gradient(100deg,var(--orange),var(--orange-d))}
+.division img{height:210px}
+.chips{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 8px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+.brands{font-size:14px;color:var(--muted);margin-top:16px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border-radius:var(--r);padding:22px 22px 20px;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;box-shadow:var(--sh);transition:transform .2s}
+.tile:hover{transform:translateY(-3px)}
+.tile:before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.14)}
+.tile h3{font-size:20px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.2)} .tile p{margin:6px 0 0;font-size:14px;opacity:.95}
+.mission{background:linear-gradient(100deg,var(--orange),var(--orange-d));color:#fff;border-radius:var(--r);padding:40px 44px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;box-shadow:var(--sh2)}
+.mission h3{font-size:26px;font-weight:800;letter-spacing:.06em} .mission p{margin:0;font-size:19px;font-style:italic;line-height:1.6}
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.timeline li{position:relative;padding:0 0 22px 34px}
+.timeline li:before{content:"";position:absolute;left:8px;top:8px;bottom:-8px;width:2px;background:#cfd9e6}
+.timeline li:after{content:"";position:absolute;left:2px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange);border:3px solid #fff;box-shadow:0 0 0 2px var(--orange)}
+.timeline .yr{display:block;font-family:var(--head);font-weight:800;color:var(--blue);font-size:18px} .timeline .ev{font-size:16px;color:#374151}
+/* branches */
 .branch-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
-.tag{font-weight:700;padding:3px 9px;border-radius:999px;color:#fff;background:var(--blue)} .tag.hc{background:var(--orange)} .tag.both{background:var(--navy)}
-.est{color:var(--muted)}
-.card dl{margin:6px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
-.card dl div{display:grid;grid-template-columns:62px 1fr;gap:6px;margin:4px 0} .card dt{color:var(--muted)} .card dd{margin:0}
-.net article{display:grid;grid-template-columns:200px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.net img{height:100%;width:100%;object-fit:cover;min-height:170px} .net div{padding:18px 18px 18px 0} .net h3{font-size:17px;color:var(--navy)} .net small{display:block;color:var(--muted);margin-bottom:8px} .net p{margin:4px 0;font-size:14px}
-.csr{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.csr .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px} .csr .pics img{border-radius:10px;height:150px;width:100%;object-fit:cover}
-table.contacts{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}
-table.contacts th,table.contacts td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-table.contacts th{background:#eef4fb;color:var(--navy);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.tag{font-weight:700;padding:4px 10px;border-radius:999px;color:#fff;background:var(--blue);font-size:12px;letter-spacing:.04em} .tag.hc{background:var(--orange)} .tag.both{background:var(--navy)}
+.est{color:var(--muted);font-weight:600}
+.card dl{margin:6px 0 0;padding-top:12px;border-top:1px dashed var(--line);font-size:14px}
+.card dl div{display:grid;grid-template-columns:64px 1fr;gap:6px;margin:5px 0} .card dt{color:var(--muted)} .card dd{margin:0}
+.mapwrap{background:var(--navy);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);position:relative}
+.mapwrap svg{display:block;width:100%;height:auto}
+.mapwrap .cap{position:absolute;left:22px;bottom:18px;color:#fff;font-family:var(--head);font-weight:700;font-size:14px;letter-spacing:.06em;opacity:.9}
+.map-split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.townlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.townlist a{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600;transition:box-shadow .15s}
+.townlist a:hover{box-shadow:var(--sh)} .townlist .pin{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:none}
+.townlist small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.net article{display:grid;grid-template-columns:200px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.net img{height:100%;width:100%;object-fit:cover;min-height:170px} .net div{padding:18px 18px 18px 0} .net h3{font-size:18px;color:var(--navy)} .net small{display:block;color:var(--muted);margin-bottom:8px} .net p{margin:4px 0;font-size:15px}
+.csr{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.csr .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px} .csr .pics img{border-radius:12px;height:170px;width:100%;object-fit:cover;box-shadow:var(--sh)}
+.csr .pics img:first-child{transform:translateY(18px)}
+table.contacts{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+table.contacts th,table.contacts td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.contacts th{background:var(--navy);color:#fff;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+table.contacts tr:hover td{background:#f8fafc}
 .tablewrap{overflow-x:auto}
 /* contact + footer */
-.contact{background:var(--navy);color:#fff} .contact h2{color:#fff} .contact a{color:#fff}
-.contact .grid3>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px}
-.contact h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-bottom:10px} .contact p{margin:4px 0;font-size:15px}
-footer{background:#10233d;color:#cbd5e1;font-size:13.5px;padding:34px 0 22px}
-footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:26px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:16px}
-footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
-footer ul{list-style:none;margin:0;padding:0} footer li{margin:5px 0} footer a{color:#cbd5e1;text-decoration:none} footer a:hover{color:#fff}
-footer img{height:30px;width:auto;margin-bottom:10px}
-footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#94a3b8}
-@media(max-width:1024px){.two,.grid2,.grid3,.csr,.timeline{grid-template-columns:1fr} .stats .wrap{grid-template-columns:1fr 1fr} .mission{grid-template-columns:1fr} .net article{grid-template-columns:1fr} .net div{padding:16px} footer .cols{grid-template-columns:1fr 1fr}
- .nav>ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);align-items:stretch;max-height:calc(100vh - 72px);overflow:auto}
- .nav>ul.open{display:flex} .nav>ul>li{border-top:1px solid var(--line)} .nav>ul>li>a{padding:14px 20px;border-radius:0}
+.contact{background:var(--navy);color:#fff;position:relative;overflow:hidden} .contact:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 90% 10%,rgba(29,174,221,.3),transparent 60%)}
+.contact .wrap{position:relative} .contact h2{color:#fff} .contact a{color:#fff}
+.contact .grid3>div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px}
+.contact h3{font-family:var(--body);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:10px} .contact p{margin:4px 0;font-size:16px}
+footer{background:#0f2340;color:#c7d2e0;font-size:14px;padding:44px 0 24px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:18px}
+footer h4{font-family:var(--body);color:#fff;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0} footer li{margin:6px 0} footer a{color:#c7d2e0;text-decoration:none} footer a:hover{color:#fff}
+footer img{height:32px;width:auto;margin-bottom:12px}
+footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8fa2ba}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease} .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(max-width:1024px){.two,.grid2,.grid3,.csr,.timeline,.map-split,.tiles{grid-template-columns:1fr} .tiles{grid-template-columns:1fr 1fr} .stats .grid{grid-template-columns:1fr 1fr} .mission{grid-template-columns:1fr} .net article{grid-template-columns:1fr} .net div{padding:16px} footer .cols{grid-template-columns:1fr 1fr}
+ .nav>ul{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);align-items:stretch;max-height:calc(100vh - 74px);overflow:auto}
+ .nav>ul.open{display:flex} .nav>ul>li{border-top:1px solid var(--line)} .nav>ul>li>a{padding:14px 20px;border-radius:0} .nav>ul>li>a:after{display:none}
  .nav .sub{position:static;display:block;border:0;box-shadow:none;padding:0 0 8px 20px;margin:0} .nav .cta{margin:10px 20px 14px;text-align:center}
- .burger{display:block} .hero h1{font-size:28px} .hero img.bg{height:200px} section{padding:44px 0} h2{font-size:25px} .banner h1{font-size:27px}}
+ .burger{display:block} .hero h1{font-size:34px} .hero .inner{padding:56px 0 120px} .hero p.lead{font-size:17px} section{padding:56px 0} h2{font-size:28px} .banner h1{font-size:30px} .stat b{font-size:28px} .csr .pics img:first-child{transform:none}}
+@media(max-width:560px){.stats .grid{grid-template-columns:1fr 1fr;gap:10px} .stat{padding:16px} .tiles{grid-template-columns:1fr} .townlist{grid-template-columns:1fr} .btn.w{margin:10px 0 0}}
 </style>
 </head>
 <body>
@@ -115,7 +161,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
 </div></header>
 <main>
 <div class="banner"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> › About BNBM PNG</div><h1>About BNBM PNG</h1><p>Papua New Guinea's fast-growing Hardware, Home &amp; Office supplier — part of the CNBM Group.</p></div></div>
-<section id="intro"><div class="wrap two">
+<section class="rv" id="intro"><div class="wrap two">
   <div class="prose">
     <div class="kicker">Introduction</div>
     <h2>Who we are</h2>
@@ -130,9 +176,9 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
   <li class="b">BNBM Home Centre <small>Port Moresby · Lae</small></li>
   <li class="b">BNBM Hardware &amp; Home Centre <small>Kokopo · Kimbe · Rabaul</small></li></ol></aside>
 </div></section>
-<section class="alt" id="history"><div class="wrap"><div class="kicker">Our History</div><h2>Three decades of growth across Papua New Guinea</h2><ul class="timeline"><li><span class="yr">1992</span><span class="ev">Pacific New Building Materials (PNBM) founded</span></li><li><span class="yr">1994</span><span class="ev">First Hardware branch established in Port Moresby, NCD</span></li><li><span class="yr">1998</span><span class="ev">Name changed from PNBM to BNBM PNG Limited</span></li><li><span class="yr">1999</span><span class="ev">Hardware branch established in Lae, Morobe Province</span></li><li><span class="yr">2001</span><span class="ev">Hardware branch established in Kokopo, East New Britain</span></li><li><span class="yr">2002</span><span class="ev">Home Centre branch established in Port Moresby</span></li><li><span class="yr">2005</span><span class="ev">Hardware branch established in Madang</span></li><li><span class="yr">2010</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Kokopo</span></li><li><span class="yr">2012</span><span class="ev">Home Centre branch in Lae; integrated branch in Kimbe, West New Britain</span></li><li><span class="yr">2014</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Rabaul</span></li><li><span class="yr">2016</span><span class="ev">Second Port Moresby Hardware branch opened at Varahe Street</span></li></ul></div></section>
-<section><div class="wrap"><div class="mission" id="mission"><h3>OUR MISSION</h3><p>“Our mission is to expand the business operations within Papua New Guinea and the Pacific region and build the best teams, earning the right to be part of the organisation and be the best service provider in all its operating branches.”</p></div></div></section>
-<section class="alt" id="network"><div class="wrap"><div class="kicker">Group Network</div><h2>Sister stores in the region</h2><div class="grid2 net">
+<section class="rv alt" id="history"><div class="wrap"><div class="kicker">Our History</div><h2>Three decades of growth across Papua New Guinea</h2><ul class="timeline"><li><span class="yr">1992</span><span class="ev">Pacific New Building Materials (PNBM) founded</span></li><li><span class="yr">1994</span><span class="ev">First Hardware branch established in Port Moresby, NCD</span></li><li><span class="yr">1998</span><span class="ev">Name changed from PNBM to BNBM PNG Limited</span></li><li><span class="yr">1999</span><span class="ev">Hardware branch established in Lae, Morobe Province</span></li><li><span class="yr">2001</span><span class="ev">Hardware branch established in Kokopo, East New Britain</span></li><li><span class="yr">2002</span><span class="ev">Home Centre branch established in Port Moresby</span></li><li><span class="yr">2005</span><span class="ev">Hardware branch established in Madang</span></li><li><span class="yr">2010</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Kokopo</span></li><li><span class="yr">2012</span><span class="ev">Home Centre branch in Lae; integrated branch in Kimbe, West New Britain</span></li><li><span class="yr">2014</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Rabaul</span></li><li><span class="yr">2016</span><span class="ev">Second Port Moresby Hardware branch opened at Varahe Street</span></li></ul></div></section>
+<section class="rv"><div class="wrap"><div class="mission" id="mission"><h3>OUR MISSION</h3><p>“Our mission is to expand the business operations within Papua New Guinea and the Pacific region and build the best teams, earning the right to be part of the organisation and be the best service provider in all its operating branches.”</p></div></div></section>
+<section class="rv alt" id="network"><div class="wrap"><div class="kicker">Group Network</div><h2>Sister stores in the region</h2><div class="grid2 net">
   <article><img src="img-wilco.jpg" alt="Wilco Hardware, Vanuatu"><div><h3>Wilco Hardware — Vanuatu</h3><small>P.O. Box 201, Champagne Estate, Vanuatu</small><p>Tel +678 22385 · Fax +678 25371</p><p><a href="mailto:harrysong@wilco.com.vu">harrysong@wilco.com.vu</a></p></div></article>
   <article><img src="img-tanzania.jpg" alt="Builder's Center, Tanzania"><div><h3>CNBMI Tanzania Ltd — Builder's Center</h3><small>Plot No. 22, Coca Cola Rd, Mikocheni-B, P.O. Box 78949, Dar es Salaam, Tanzania</small><p>Tel +255 02775377 · +255 02775237</p><p><a href="mailto:headoffice@builderscenter.co.tz">headoffice@builderscenter.co.tz</a></p></div></article>
 </div></div></section>
@@ -147,5 +193,10 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
   </div>
   <div class="bottom"><span>&copy; 2026 BNBM PNG Limited. All rights reserved.</span><span>www.bnbmpng.com</span></div>
 </div></footer>
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
 </body>
 </html>
