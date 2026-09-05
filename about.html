@@ -22,7 +22,7 @@ img{max-width:100%;display:block} a{color:var(--blue)} h1,h2,h3,h4{font-family:v
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
-.nav .logo img{height:40px;width:auto}
+.nav .logo img{height:34px;width:auto}
 .nav>ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;align-items:center}
 .nav>ul>li{position:relative}
 .nav>ul>li>a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px;white-space:nowrap;position:relative}
@@ -142,6 +142,25 @@ footer h4{font-family:var(--body);color:#fff;font-size:12.5px;letter-spacing:.12
 footer ul{list-style:none;margin:0;padding:0} footer li{margin:6px 0} footer a{color:#c7d2e0;text-decoration:none} footer a:hover{color:#fff}
 footer img{height:32px;width:auto;margin-bottom:12px}
 footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8fa2ba}
+/* brands, gallery, featured, range, challengar */
+.brands-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.brands-h{font-family:var(--body);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-left:12px;border-left:4px solid var(--blue)} .brands-h.hc{border-left-color:var(--orange)}
+.brandlist{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.brandlist li{font-family:var(--head);font-weight:700;font-size:14px;padding:8px 14px;border-radius:9px;background:#fff;border:1px solid var(--line);color:var(--navy);box-shadow:0 2px 8px rgba(16,24,40,.04)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery figure{margin:0;border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
+.gallery img{width:100%;height:190px;object-fit:cover;transition:transform .3s} .gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--navy)}
+.card.feat img{height:300px;object-fit:cover;object-position:center top;background:#f1f5f9}
+.rangelist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 18px}
+.rangelist li{position:relative;padding:12px 14px 12px 40px;background:#fff;border:1px solid var(--line);border-radius:10px;font-weight:600;font-size:15px}
+.rangelist li:before{content:"";position:absolute;left:14px;top:15px;width:14px;height:14px;border-radius:4px;background:var(--blue)} .rangelist.hc li:before{background:var(--orange)}
+.card.ch{border-top:4px solid #19a89d} .card.ch .town{font-family:var(--head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#19a89d} .card.ch .ct{font-size:14px;margin-top:6px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center} .split img{border-radius:var(--r);box-shadow:var(--sh2);width:100%;height:100%;object-fit:cover;max-height:420px}
+.claim{display:inline-block;background:var(--navy);color:#fff;font-family:var(--head);font-weight:800;font-size:22px;padding:12px 20px;border-radius:10px;margin:8px 0 14px}
+.fb{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none}
+.fb svg{width:18px;height:18px;fill:currentColor}
+@media(max-width:1024px){.brands-grid,.split,.rangelist{grid-template-columns:1fr} .gallery{grid-template-columns:1fr 1fr} .card.feat img{height:240px}}
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease} .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
@@ -155,9 +174,9 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="logo" href="index.html" aria-label="BNBM Hardware &amp; Home Centre"><img src="logo.jpg" alt="BNBM Hardware &amp; Home Centre"></a>
+  <a class="logo" href="index.html" aria-label="BNBM Hardware &amp; Home Centre"><img src="logo-bnbm-hhc.png" alt="BNBM Hardware &amp; Home Centre"></a>
   <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-  <ul id="menu"><li><a href="index.html">Home</a></li><li class="on"><a href="about.html">About Us</a><ul class="sub"><li><a href="about.html#intro">Introduction</a></li><li><a href="about.html#structure">Company Structure</a></li><li><a href="about.html#history">Our History</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#network">Group Network</a></li></ul></li><li><a href="products.html">Products &amp; Services</a><ul class="sub"><li><a href="hardware.html">Hardware</a></li><li><a href="home-centre.html">Home Centre</a></li><li><a href="services.html">Services &amp; Delivery</a></li></ul></li><li><a href="branches.html">Our Branches</a><ul class="sub"><li><a href="branches.html#pom_hw">Port Moresby Hardware</a></li><li><a href="branches.html#pom_hc">Port Moresby Home Centre</a></li><li><a href="branches.html#pom_varahe">Port Moresby Varahe Hardware</a></li><li><a href="branches.html#lae_hw">Lae Hardware</a></li><li><a href="branches.html#lae_hc">Lae Home Centre</a></li><li><a href="branches.html#madang">Madang Branch</a></li><li><a href="branches.html#kokopo">Kokopo Branch</a></li><li><a href="branches.html#rabaul">Rabaul Branch</a></li><li><a href="branches.html#kimbe">Kimbe Branch</a></li></ul></li><li><a href="culture.html">Corporate Culture</a><ul class="sub"><li><a href="culture.html#why">Why BNBM</a></li><li><a href="culture.html#mission">Our Mission</a></li></ul></li><li><a href="csr.html">Social Responsibility</a></li><li><a class="cta" href="contact.html">Contact Us</a></li></ul>
+  <ul id="menu"><li><a href="index.html">Home</a></li><li class="on"><a href="about.html">About Us</a><ul class="sub"><li><a href="about.html#intro">Introduction</a></li><li><a href="about.html#structure">Company Structure</a></li><li><a href="about.html#history">Our History</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#network">Group Network</a></li></ul></li><li><a href="products.html">Products &amp; Services</a><ul class="sub"><li><a href="hardware.html">Hardware</a></li><li><a href="home-centre.html">Home Centre</a></li><li><a href="challengar.html">Challengar Digital Stores</a></li><li><a href="products.html#brands">Brands We Carry</a></li><li><a href="services.html">Services &amp; Delivery</a></li></ul></li><li><a href="branches.html">Our Branches</a><ul class="sub"><li><a href="branches.html#pom_hw">Port Moresby Kennedy Hardware</a></li><li><a href="branches.html#pom_varahe">Port Moresby Varahe Hardware</a></li><li><a href="branches.html#pom_hc">Port Moresby Home Centre</a></li><li><a href="branches.html#lae_hw">Lae Josey Street Hardware</a></li><li><a href="branches.html#lae_malaita">Lae Malaita Street Hardware</a></li><li><a href="branches.html#lae_hc">Lae Home Centre</a></li><li><a href="branches.html#hagen">Mt Hagen Branch</a></li><li><a href="branches.html#goroka">Goroka Branch</a></li><li><a href="branches.html#madang">Madang Branch</a></li><li><a href="branches.html#kokopo">Kokopo Branch</a></li><li><a href="branches.html#rabaul">Rabaul Branch</a></li><li><a href="branches.html#kimbe">Kimbe Branch</a></li><li><a href="branches.html#popondetta">Popondetta Branch</a></li></ul></li><li><a href="culture.html">Corporate Culture</a><ul class="sub"><li><a href="culture.html#why">Why BNBM</a></li><li><a href="culture.html#mission">Our Mission</a></li></ul></li><li><a href="csr.html">Social Responsibility</a></li><li><a class="cta" href="contact.html">Contact Us</a></li></ul>
 </div></header>
 <main>
 <div class="banner"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> › About BNBM PNG</div><h1>About BNBM PNG</h1><p>Papua New Guinea's fast-growing Hardware, Home &amp; Office supplier — part of the CNBM Group.</p></div></div>
@@ -165,18 +184,19 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
   <div class="prose">
     <div class="kicker">Introduction</div>
     <h2>Who we are</h2>
-    <p>Specialising in wholesale and retail business in Papua New Guinea, BNBM PNG Limited has more than 500 national employees around the country. From its humble beginnings and inception in 1992, BNBM has developed into a fast-growing Hardware, Home &amp; Office supplier in Papua New Guinea.</p>
+    <p>Specialising in wholesale and retail business in Papua New Guinea, BNBM PNG Limited employs more than 1,000 national staff around the country. From its humble beginnings and inception in 1992, BNBM has developed into a nationwide Hardware, Home &amp; Office supplier with 13 Hardware and Home Centre stores in nine locations, and 11 Challengar Technologies digital stores.</p>
     <p>BNBM PNG Limited comes under the CNBM Group, which is also the parent company to CNBM Material Co. Ltd and CNBM Investment Co. Ltd based in Shenzhen, Guangdong Province, China. BNBM PNG Limited has established business operations across the provinces of Papua New Guinea, enabling network support in the country.</p>
     <p>We offer excellent quality and reasonable prices, and ensure we meet our customers' demands at all levels — whether a D.I.Y. job at home, an office fit-out or a major construction project.</p>
   </div>
   <aside class="structure" id="structure"><h3>Company structure</h3><ol>
   <li>CNBM Group</li><li>China National Building Material Co., Ltd.</li><li>CNBM Investment Co., Ltd.</li>
   <li class="l">BNBM PNG Limited</li>
-  <li class="b">BNBM Hardware <small>Port Moresby · Lae · Madang</small></li>
+  <li class="b">BNBM Hardware <small>Port Moresby ×2 · Lae ×2</small></li>
   <li class="b">BNBM Home Centre <small>Port Moresby · Lae</small></li>
-  <li class="b">BNBM Hardware &amp; Home Centre <small>Kokopo · Kimbe · Rabaul</small></li></ol></aside>
+  <li class="b">BNBM Hardware &amp; Home Centre <small>Mt Hagen · Goroka · Madang · Kokopo · Rabaul · Kimbe · Popondetta</small></li>
+  <li class="b" style="background:#e3f6f4;color:#0f6b64">Challengar Technologies <small>11 digital stores · Xiaomi &amp; TECNO</small></li></ol></aside>
 </div></section>
-<section class="rv alt" id="history"><div class="wrap"><div class="kicker">Our History</div><h2>Three decades of growth across Papua New Guinea</h2><ul class="timeline"><li><span class="yr">1992</span><span class="ev">Pacific New Building Materials (PNBM) founded</span></li><li><span class="yr">1994</span><span class="ev">First Hardware branch established in Port Moresby, NCD</span></li><li><span class="yr">1998</span><span class="ev">Name changed from PNBM to BNBM PNG Limited</span></li><li><span class="yr">1999</span><span class="ev">Hardware branch established in Lae, Morobe Province</span></li><li><span class="yr">2001</span><span class="ev">Hardware branch established in Kokopo, East New Britain</span></li><li><span class="yr">2002</span><span class="ev">Home Centre branch established in Port Moresby</span></li><li><span class="yr">2005</span><span class="ev">Hardware branch established in Madang</span></li><li><span class="yr">2010</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Kokopo</span></li><li><span class="yr">2012</span><span class="ev">Home Centre branch in Lae; integrated branch in Kimbe, West New Britain</span></li><li><span class="yr">2014</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Rabaul</span></li><li><span class="yr">2016</span><span class="ev">Second Port Moresby Hardware branch opened at Varahe Street</span></li></ul></div></section>
+<section class="rv alt" id="history"><div class="wrap"><div class="kicker">Our History</div><h2>Three decades of growth across Papua New Guinea</h2><ul class="timeline"><li><span class="yr">1992</span><span class="ev">Pacific New Building Materials (PNBM) founded</span></li><li><span class="yr">1994</span><span class="ev">First Hardware branch established in Port Moresby, NCD</span></li><li><span class="yr">1998</span><span class="ev">Name changed from PNBM to BNBM PNG Limited</span></li><li><span class="yr">1999</span><span class="ev">Hardware branch established in Lae, Morobe Province</span></li><li><span class="yr">2001</span><span class="ev">Hardware branch established in Kokopo, East New Britain</span></li><li><span class="yr">2002</span><span class="ev">Home Centre branch established in Port Moresby</span></li><li><span class="yr">2005</span><span class="ev">Hardware branch established in Madang</span></li><li><span class="yr">2010</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Kokopo</span></li><li><span class="yr">2012</span><span class="ev">Home Centre branch in Lae; integrated branch in Kimbe, West New Britain</span></li><li><span class="yr">2014</span><span class="ev">Integrated Hardware &amp; Home Centre branch in Rabaul</span></li><li><span class="yr">2016</span><span class="ev">Second Port Moresby Hardware branch opened at Varahe Street</span></li><li><span class="yr">2023–24</span><span class="ev">Expansion to Mt Hagen, Popondetta and Goroka; second Lae hardware store on Malaita Street; Challengar Technologies digital stores open nationwide</span></li></ul></div></section>
 <section class="rv"><div class="wrap"><div class="mission" id="mission"><h3>OUR MISSION</h3><p>“Our mission is to expand the business operations within Papua New Guinea and the Pacific region and build the best teams, earning the right to be part of the organisation and be the best service provider in all its operating branches.”</p></div></div></section>
 <section class="rv alt" id="network"><div class="wrap"><div class="kicker">Group Network</div><h2>Sister stores in the region</h2><div class="grid2 net">
   <article><img src="img-wilco.jpg" alt="Wilco Hardware, Vanuatu"><div><h3>Wilco Hardware — Vanuatu</h3><small>P.O. Box 201, Champagne Estate, Vanuatu</small><p>Tel +678 22385 · Fax +678 25371</p><p><a href="mailto:harrysong@wilco.com.vu">harrysong@wilco.com.vu</a></p></div></article>
@@ -186,9 +206,9 @@ footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wra
 </main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><img src="img-bnbm_white.jpg" alt="BNBM"><p style="margin:0">BNBM PNG Limited — Papua New Guinea's Hardware, Home &amp; Office supplier since 1992. A member of the CNBM Group.</p></div>
+    <div><img src="img-bnbm_white.jpg" alt="BNBM"><p style="margin:0 0 10px"><b style="color:#fff">Building a better future.</b><br>BNBM PNG Limited — Papua New Guinea's Hardware &amp; Home Centre since 1992. A member of the CNBM Group.</p><a class="fb" href="https://www.facebook.com/BNBMPNG" target="_blank" rel="noopener" style="color:#fff"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>@BNBMPNG</a></div>
     <div><h4>Company</h4><ul><li><a href="about.html#intro">Introduction</a></li><li><a href="about.html#history">Our History</a></li><li><a href="culture.html">Corporate Culture</a></li><li><a href="csr.html">Social Responsibility</a></li></ul></div>
-    <div><h4>Products</h4><ul><li><a href="hardware.html">Hardware</a></li><li><a href="home-centre.html">Home Centre</a></li><li><a href="services.html">Services &amp; Delivery</a></li><li><a href="branches.html">Our Branches</a></li></ul></div>
+    <div><h4>Products</h4><ul><li><a href="hardware.html">Hardware</a></li><li><a href="home-centre.html">Home Centre</a></li><li><a href="challengar.html">Challengar Digital Stores</a></li><li><a href="products.html#brands">Brands We Carry</a></li><li><a href="services.html">Services &amp; Delivery</a></li></ul></div>
     <div><h4>Head Office</h4><ul><li>Kennedy Road, Gordons, NCD</li><li>P.O. Box 466, Boroko, PNG</li><li>Tel <a href="tel:+6753233379">+675 323 3379</a></li><li><a href="contact.html">All contact details →</a></li></ul></div>
   </div>
   <div class="bottom"><span>&copy; 2026 BNBM PNG Limited. All rights reserved.</span><span>www.bnbmpng.com</span></div>
